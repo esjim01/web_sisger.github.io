@@ -1,0 +1,95 @@
+/* Reset y overflow oculto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  /*overflow: hidden; */
+}
+
+/* Navbar */
+nav.transparent {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: background-color 0.3s, border-bottom 0.3s;
+  padding: 0 1rem;
+}
+nav.scrolled {
+  background-color: #000 !important;
+  border-bottom: none;
+}
+/* Texto e íconos */
+nav .brand-logo,
+nav.transparent .nav-wrapper a,
+nav.scrolled .nav-wrapper a {
+  color: #fff !important;
+  transition: color 0.3s;
+}
+
+/* Hover enlaces */
+nav.transparent a:hover {
+  background-color: rgba(255,255,255,0.2) !important;
+}
+nav.scrolled a:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Hero full-screen con vídeo */
+.hero {
+  /*position: relative;*/
+  width: 100%;
+  height: 94vh;
+  overflow: hidden;
+}
+#bgvideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.buttons .btn {
+  margin: 0 0.5rem;
+}
+
+.container-data {
+
+  justify-content: center;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.grafico-container {
+  width: 600px !important; /* Ajusta el ancho deseado */
+  max-width: 100% !important; /* Para que no desborde en pantallas pequeñas */
+  height: 300px; /* Ajusta la altura deseada */
+  margin: 0 auto; /* Centrar el gráfico */
+}
