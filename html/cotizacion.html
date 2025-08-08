@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SISGER - Cotizacion</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar" class="navbar-fixed">
+    <nav class="transparent nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo white-text">SISGER</a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../html/Index.html" class="white-text">Inicio</a></li>         
+          <li><a href="#servicios" class="white-text">Servicios</a></li>
+          <li><a href="#proyectos" class="white-text">Proyectos</a></li>
+          <li><a href="#contacto" class="white-text">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Sidenav Mobile -->
+  <ul class="sidenav" id="mobile-menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop id="bgvideo">
+      <source src="../Videos/20250729_2354_Animating Renewable Energy_storyboard_01k1ctwnptfq4tsg3djhqqg63d.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content center-align">
+      <h1 class="white-text">Impulsa tu proyecto con energía limpia y rentable. Cotiza hoy con SISGER y transforma tu inversión en resultados sostenibles</h1>
+      <h6 class="white-text">Conscientes de la importancia de la transición energética, presentamos esta propuesta adaptada a sus necesidades, con soluciones sostenibles que combinan innovación, eficiencia y responsabilidad ambiental.</h6>
+    </div>
+  </section>
+
+  <form action="procesar_cotizacion.php" method="post" class="cotizacion-form">
+ <h5 class="solicitud-cotizacion">Solicitud de Cotización - SISGER</h5>
+ <br>
+  <p>Complete este formulario con la información solicitada para brindarle una propuesta ajustada a sus necesidades energéticas.</p>
+
+  <!-- Datos de la empresa o cliente -->
+  <div class="input-field">
+    <label for="razon_social">Razón social / Nombre completo</label>
+    <input type="text" id="razon_social" name="razon_social" placeholder="Ej. Energías del Futuro S.A.S." required>
+  </div>
+
+  <div class="input-field">
+    <label for="nit">NIT / Documento de Identidad</label>
+    <input type="text" id="nit" name="nit" placeholder="Ej. 900123456-7" required>
+  </div>
+
+  <div class="input-field">
+    <label for="email">Correo electrónico de contacto</label>
+    <input type="email" id="email" name="email" placeholder="correo@empresa.com" required>
+  </div>
+
+  <div class="input-field">
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 310 123 4567" required>
+  </div>
+
+  <div class="input-field">
+    <label for="direccion">Dirección del proyecto</label>
+    <input type="text" id="direccion" name="direccion" placeholder="Ej. Calle 45 # 12-34, Manizales" required>
+  </div>
+
+  <div class="input-field">
+    <label for="ciudad">Ciudad / Municipio</label>
+    <input type="text" id="ciudad" name="ciudad" required>
+  </div>
+
+  <!-- Información del proyecto -->
+  <div class="input-field">
+    <label for="servicio">Tipo de servicio requerido</label>
+    <select id="servicio" name="servicio" required>
+      <option value="" disabled selected>Seleccione</option>
+      <option value="solar">Energía Solar</option>
+      <option value="eolica">Energía Eólica</option>
+      <option value="hidraulica">Energía Hidráulica</option>
+      <option value="geotermica">Energía Geotérmica</option>
+      <option value="maremotriz">Energía Maremotriz</option>
+      <option value="biomasa">Energía de Biomasa</option>
+    </select>
+  </div>
+
+  <div class="input-field">
+    <label for="uso">Uso principal del sistema</label>
+    <select id="uso" name="uso" required>
+      <option value="" disabled selected>Seleccione</option>
+      <option value="residencial">Residencial</option>
+      <option value="comercial">Comercial</option>
+      <option value="industrial">Industrial</option>
+      <option value="institucional">Institucional</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+
+  <div class="input-field">
+    <label for="consumo">Consumo promedio mensual de energía (kWh)</label>
+    <input type="number" id="consumo" name="consumo" placeholder="Ej. 1200" required>
+  </div>
+
+  <div class="input-field">
+    <label for="presupuesto">Presupuesto estimado disponible (COP)</label>
+    <input type="number" id="presupuesto" name="presupuesto" placeholder="Ej. 50000000" required>
+  </div>
+
+  <div class="input-field">
+    <label for="tiempo_ejecucion">Plazo estimado para la ejecución</label>
+    <select id="tiempo_ejecucion" name="tiempo_ejecucion" required>
+      <option value="" disabled selected>Seleccione</option>
+      <option value="inmediato">Inmediato</option>
+      <option value="1-3 meses">1 a 3 meses</option>
+      <option value="3-6 meses">3 a 6 meses</option>
+      <option value="6-12 meses">6 a 12 meses</option>
+    </select>
+  </div>
+
+  <div class="input-field">
+    <label for="descripcion">Descripción detallada del proyecto</label>
+    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Incluya ubicación específica, requerimientos técnicos, expectativas de generación y cualquier información adicional relevante" required></textarea>
+  </div>
+
+  <!-- Adjuntar documentos -->
+  <div class="input-field">
+    <label for="archivo">Adjuntar planos, estudios o documentos técnicos (opcional)</label><br>
+    <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx,.jpg,.png">
+  </div>
+
+  <!-- Botón de envío -->
+  <div class="input-field">
+    <button type="submit" class="btn-large waves-effect waves-light green">
+      Enviar solicitud de cotización
+    </button>
+  </div>
+</form>
+
+
+    <!-- Pie de página -->
+  <footer id="contacto" class="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Contáctanos</h5>
+          <p class="grey-text text-lighten-4">info@renovables.com | +57 300 0000000</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+      <div class="container center-align">
+        © 2025 Renovables S.A.S.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS y script personalizado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../Javascript/script.js"></script>
+</body>
+</html>
