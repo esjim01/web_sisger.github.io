@@ -125,3 +125,32 @@ function dibujarGraficoRadiacion(meses, valores) {
     }
   });
 }
+
+const audio = document.getElementById("jingle-audio");
+
+function reproducirJingle() {
+  if (!audio) {
+    console.error("No se encontró el elemento de audio.");
+    return;
+  }
+
+  if (audio.paused) {
+    audio.play().catch(error => {
+      console.error("Error al reproducir:", error);
+    });
+  } else {
+    audio.pause();
+  }
+}
+
+function detenerJingle() {
+  if (!audio) {
+    console.error("No se encontró el elemento de audio.");
+    return;
+  }
+
+  if (!audio.paused) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}

@@ -90,7 +90,7 @@ nav.scrolled a:hover {
 .grafico-container {
   width: 600px !important; /* Ajusta el ancho deseado */
   max-width: 100% !important; /* Para que no desborde en pantallas pequeñas */
-  height: 300px; /* Ajusta la altura deseada */
+  height: auto; /* Ajusta la altura deseada */
   margin: 0 auto; /* Centrar el gráfico */
 }
 
@@ -235,3 +235,73 @@ button {
 button:hover {
     background-color: #00509e;
 }
+
+.equal-height-col {
+  display: flex;
+}
+
+.equal-height-card {
+  flex: 1;
+}
+
+/* Fuente corporativa */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilo para la sección ¿Quiénes somos? */
+#quienes-somos {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* blanco */
+  padding: 60px 0;
+}
+
+#quienes-somos h2.header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #060707;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#quienes-somos p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+  text-align: justify;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+#quienes-somos .btn-jingle,
+#quienes-somos button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #fff41e;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+#quienes-somos .btn-jingle:hover,
+#quienes-somos button:hover {
+  background-color: #dbdb10;
+}
+
+.video-container-quienes {
+  max-width: 900px; /* Puedes ajustar este valor */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.video-container-quienes video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+

@@ -1,20 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quiénes Somos?</title>
-    <!-- Materialize CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
-    <!-- Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quiénes Somos?</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
+  
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/styles.css"/>
+  <style>
+
+    
+    .card-title i {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="center-align">¿Quiénes Somos?</h1>
-        <p class="flow-text">Somos una empresa dedicada a la implementación de soluciones de energía renovable, comprometida con la sostenibilidad y el cuidado del medio ambiente.</p>
+<section id="quienes-somos" class="section white">
+  <div class="row container">
+    <h2 class="header">¿Quiénes somos?</h2>
+    <p class="grey-text text-darken-3 lighten-3">
+    En SISGER, creemos que la energía no solo mueve máquinas, sino también sueños, comunidades y futuros. Nacimos con una convicción profunda: es posible transformar el mundo a través de soluciones limpias, inteligentes y sostenibles.
+Nuestra historia comenzó  en la bella ciudad de MANIZALES con una visión compartida por cuatro personas comprometidas con el cambio: el ingeniero informático Edward Steven Jiménez, el ingeniero informático Mateo Alzate, la desarrolladora de software Valeria Giraldo y el ingeniero industrial Cristian Rodríguez. Juntos, decidimos unir nuestras fortalezas para construir una empresa que fuera más allá del negocio —una empresa con propósito.
+SISGER existe para brindar soluciones energéticas eficientes e innovadoras, que eleven la calidad de vida de las personas y ayuden a construir un planeta más sano para las próximas generaciones.
+Nuestro compromiso es claro: liderar la transformación energética de Latinoamérica y abrir camino hacia un futuro más limpio, justo y responsable con el medio ambiente.
+Somos SISGER: energía que transforma, pero además inspira y conecta.
+Te invitamos a unirte a nosotros en este viaje hacia un futuro más brillante. Juntos, podemos hacer la diferencia.
+
+    </p>
+
+    <button onclick="reproducirJingle()" class="btn-jingle">
+      ▶ reproducir jingle
+    </button>
+
+    <audio id="jingle-audio" src="../audios/SISjing.mp3">Tu navegador no soporta el elemento de audio.</audio>
+       <button onclick="detenerJingle()">Detener Jingle</button>
+
+</section>
+
+
+
+
+
+<div class="row">
+  <!-- Misión -->
+  <div class="col s12 m6 equal-height-col" data-aos="fade-right">
+    <div class="card blue lighten-4 equal-height-card">
+      <div class="card-content black-text">
+        <span class="card-title">
+          <i class="material-icons">flag</i> Nuestra Misión
+        </span>
+        <p>Brindar soluciones energéticas eficientes e innovadoras que contribuyan al desarrollo sostenible y mejoren la calidad de vida de las comunidades.</p>
+      </div>
     </div>
+  </div>
+
+  <!-- Visión -->
+  <div class="col s12 m6 equal-height-col" data-aos="fade-left">
+    <div class="card teal lighten-4 equal-height-card">
+      <div class="card-content black-text">
+        <span class="card-title">
+          <i class="material-icons">visibility</i> Nuestra Visión
+        </span>
+        <p>Ser líderes en el mercado de energías renovables en Latinoamérica, promoviendo un futuro más limpio y responsable con el medio ambiente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- Videos Institucionales -->
+    <div class="section" data-aos="zoom-in">
+      <h5 class="center-align">Videos Institucionales</h5>
+      <div class="video-container-quienes">
+        <video controls>
+          <source src="../videos/video_institucional.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // duración en milisegundos
+      once: true      // animar solo una vez al hacer scroll
+    });
+  </script>
+  <script src="../Javascript/script.js"></script>
+
 </body>
 </html>
