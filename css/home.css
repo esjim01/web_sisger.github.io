@@ -1,0 +1,180 @@
+/* Sección Servicios */
+.section-servicios {
+  padding-top: 1%;
+  padding-bottom: 1rem;
+}
+
+.section-title .kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.section-title .title {
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin: 0;
+}
+.section-title .title-underline {
+  width: 88px;
+  height: 4px;
+  margin: 1rem auto 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00c853, #64dd17);
+}
+.section-title .subtitle {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  opacity: 0.85;
+}
+
+/* Grid y cards iguales */
+.card-col { display: flex; }
+.service-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.service-card .card-image {
+  aspect-ratio: 16/9;   /* altura uniforme en todas */
+  overflow: hidden;
+}
+.service-card .card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* recorte elegante del video */
+  display: block;
+}
+.service-card .card-content {
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+
+/* CTA de la sección servicios (evita estilos del hero) */
+.cta-servicios {
+  margin-bottom: 20px;
+}
+
+
+/* ======= Proyectos ======= */
+.section-proyectos {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Reutilizamos .section-title y .title-underline del home */
+.section-proyectos .subtitle {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  opacity: 0.85;
+}
+
+/* Slider look */
+.sisger-slider {
+  border-radius: 14px;
+  overflow: hidden;                /* redondeado real */
+  box-shadow: 0 14px 28px rgba(0,0,0,.12), 0 10px 10px rgba(0,0,0,.08);
+}
+.sisger-slider .slides li img {
+  width: 100%;
+  height: 520px;                   /* altura del carrusel */
+  object-fit: cover;               /* recorte elegante */
+}
+@media (max-width: 600px) {
+  .sisger-slider .slides li img { height: 320px; }
+}
+
+/* Opcional: mejorar legibilidad de captions */
+.sisger-slider .caption h3,
+.sisger-slider .caption h5 {
+  text-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+
+
+/* ======= Footer SISGER ======= */
+.footer-sisger {
+  background: #0b0b0b;           /* negro elegante */
+  color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.footer-sisger .container { max-width: 1180px; }
+
+/* Titulares y textos */
+.footer-sisger__brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+.footer-sisger__title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: .5rem 0 1rem;
+}
+.footer-sisger__about {
+  opacity: .9;
+  line-height: 1.7;
+  margin-right: 1rem;
+}
+.footer-sisger__list {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.footer-sisger__list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: .95;
+  margin: .35rem 0;
+}
+
+/* Social */
+.footer-sisger__social {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.footer-sisger__social-btn {
+  width: 42px; height: 42px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.footer-sisger__social-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.24);
+}
+
+/* Línea superior (opcional) */
+.footer-sisger::before {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 4px;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00c853, #64dd17);
+  box-shadow: 0 4px 12px rgba(0, 200, 83, .35);
+}
+
+/* Franja de copyright */
+.footer-sisger__bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  opacity: .85;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-sisger { padding-top: 2.25rem; }
+  .footer-sisger__about { margin-right: 0; }
+}

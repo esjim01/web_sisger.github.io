@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
@@ -26,10 +27,10 @@
         <a href="#" data-target="mobile-menu" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#" class="white-text">Inicio</a></li>         
-          <li><a href="#proyectos" class="white-text">Proyectos</a></li>
           <li><a href="#servicios" class="white-text">Servicios</a></li>
-          <li><a href="Quines_Somos.html" class="white-text">¿Quienes somos?</a></li>
+          <li><a href="#proyectos" class="white-text">Proyectos</a></li>
           <li><a href="#contacto" class="white-text">Contacto</a></li>
+          <li><a href="Quines_Somos.html" class="white-text">¿Quienes somos?</a></li>
         </ul>
       </div>
     </nav>
@@ -38,8 +39,8 @@
   <!-- Sidenav Mobile -->
   <ul class="sidenav" id="mobile-menu">
     <li><a href="#">Inicio</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#quienes-somos">¿Quienes somos?</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
@@ -53,123 +54,260 @@
     <div class="hero-content center-align">
       <h1 class="white-text">Sistema de Gestión de Información para Energías Renovables</h1>
       <div class="buttons">
-        <a href="../html/clima.html" class="btn btn-large yellow darken-2 black-text" style="border-radius: 8px;">Clima</a>
+        <a href="../html/clima.html" class="btn btn-large yellow darken-2 black-text" style="border-radius: 8px; margin-top: 7rem;">Clima</a>
       </div>
     </div>
   </section>
 
-  <!-- Sección de Servicios -->
-  <section id="servicios" class="section scrollspy">
-    <div class="container">
-      <h2 class="center">Servicios</h2>
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <video width="100%" autoplay muted loop playsinline>
-                <source src="../Videos/energia solar.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Energia Solar</span>
-              <p>Diseño e instalación de sistemas de energía solar fotovoltaica para hogares y sectores industriales.</p>
-            </div>
+  <!-- ======= Servicios ======= -->
+<section id="servicios" class="section section-servicios scrollspy">
+  <div class="container">
+
+    <!-- Título -->
+    <div class="center-align section-title">
+      <h2 class="title">Servicios</h2>
+      <div class="title-underline"></div>
+      <p class="subtitle">
+        Soluciones energéticas innovadoras para un futuro sostenible.
+      </p>
+    </div>
+
+    <div class="row service-grid">
+      <!-- Card ejemplo -->
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
+              <source src="../Videos/energia solar.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía Solar</span>
+            <p>Instalación de sistemas fotovoltaicos para hogares e industrias.</p>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <video width="100%" autoplay muted loop playsinline>
-                <source src="../Videos/energia eolica.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Energia Eólica</span>
-              <p>Desarrollo e integración de sistemas de energía eólica mediante aerogeneradores adaptados a cada proyecto</p>
-            </div>
+      </div>
+
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
+              <source src="../Videos/energia eolica.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía Eólica</span>
+            <p>Integración de sistemas de energía eólica adaptados a cada proyecto.</p>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <video width="100%" autoplay muted loop playsinline>
+      </div>
+
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
               <source src="../Videos/energia hidraulica.mp4" type="video/mp4">
             </video>
-            <div class="card-content">
-              <span class="card-title">Energia Hidráulica</span>
-              <p>Diseño y mantenimiento de soluciones hidroeléctricas adaptadas a cada necesidad energética.</p>
-            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía Hidráulica</span>
+            <p>Soluciones hidroeléctricas adaptadas a cada necesidad energética.</p>
           </div>
         </div>
+      </div>
 
+      <!-- Resto de servicios -->
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
+              <source src="../Videos/Energía geotérmica.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía Geotérmica</span>
+            <p>Soluciones geotérmicas sostenibles y de alto rendimiento.</p>
+          </div>
+        </div>
+      </div>
 
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <video width="100%" autoplay muted loop playsinline>
-                <source src="../Videos/Energía geotérmica.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Energia Geotérmica</span>
-              <p>Soluciones geotérmicas para generación energética sostenible y de alto rendimiento.</p>
-            </div>
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
+              <source src="../Videos/energia maremotriz.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía Mareomotriz</span>
+            <p>Tecnologías para generar energía con el movimiento de las mareas.</p>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <video width="100%" autoplay muted loop playsinline>
-                <source src="../Videos/energia maremotriz.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Energia Mareomotriz</span>
-              <p>Implementación de tecnologías maremotrices para generación de energía a partir del movimiento de las mareas.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image">
-              <video width="100%" autoplay muted loop playsinline>
-                <source src="../Videos/enerigia Biomasa.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content">
-              <span class="card-title">Energia de Biomasa</span>
-              <p>Desarrollo de soluciones energéticas sostenibles mediante el aprovechamiento de residuos orgánicos y biomasa.</p>
-            </div>
-          </div>
-        </div>              
       </div>
-    </div>
-        <div class="hero-content center-align">
-      <div class="buttons">
-        <a href="../html/cotizacion.html" class="btn btn-large yellow darken-2 black-text" style="border-radius: 8px; margin-top: 30px;">Solicita tu cotización</a>
-      </div>
-    </div>
-  </section>
 
-  
-  <!-- Pie de página -->
-  <footer id="contacto" class="page-footer grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h5 class="white-text">Contáctanos</h5>
-          <p class="grey-text text-lighten-4">info@renovables.com | +57 300 0000000</p>
+      <div class="col s12 m6 l4 card-col">
+        <div class="card hoverable service-card">
+          <div class="card-image">
+            <video autoplay muted loop playsinline>
+              <source src="../Videos/enerigia Biomasa.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="card-content">
+            <span class="card-title">Energía de Biomasa</span>
+            <p>Aprovechamiento de biomasa para soluciones energéticas sostenibles.</p>
+          </div>
         </div>
       </div>
+    </div> 
+  </div>
+</section>
+
+<!-- ======= Proyectos ======= -->
+<section id="proyectos" class="section section-proyectos scrollspy">
+  <div class="container">
+    <div class="center-align section-title">
+      <h2 class="title">Proyectos</h2>
+      <div class="title-underline"></div>
+      <p class="subtitle">Algunos de nuestros proyectos realizados.</p>
     </div>
-    <div class="footer-copyright grey darken-4">
-      <div class="container center-align">
-        © 2025 Renovables S.A.S.
+  </div>
+
+  <!-- Slider Materialize -->
+  <div class="container">
+    <div class="slider sisger-slider">
+      <ul class="slides">
+        <li>
+          <img src="../images/Equipo_trabajo.png" alt="Equipo_trabajo" />
+          <div class="caption left-align">
+            <h3>Equipo de trabajo SISGER</h3>
+            <h5 class="light grey-text text-lighten-3">Más que un equipo</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../images/Trabajo1_tubo.png" alt="Trabajo1_tubo" />
+          <div class="caption right-align">
+            <h3>Energía Geotérmica</h3>
+            <h5 class="light grey-text text-lighten-3">Escalable y eficiente</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../images/Trabajo2_hidroelectrica.png" alt="Trabajo2_hidroelectrica" />
+          <div class="caption center-align">
+            <h3>Central Hidráulica</h3>
+            <h5 class="light grey-text text-lighten-3">Energía estable</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../images/Trabajo3_eolicahidroelectrica.png" alt="Trabajo3_geotermia" />
+          <div class="caption left-align">
+            <h3>Energía Eólica</h3>
+            <h5 class="light grey-text text-lighten-3">Alto rendimiento</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../images/Empleados.png" alt="Empleados" />
+          <div class="caption right-align">
+            <h3>Equipo de trabajo</h3>
+            <h5 class="light grey-text text-lighten-3">Capacitación continua</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../images/Tienda.png" alt="Tienda" />
+          <div class="caption center-align">
+            <h3>Tienda</h3>
+            <h5 class="light grey-text text-lighten-3">Tienda SISGER</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Botón -->
+    <div class="cta-servicios center-align">
+      <a href="../html/cotizacion.html" class="btn btn-large yellow darken-2 black-text" style="border-radius: 8px; margin-top: 30px; margin-bottom: 15px;">
+        Solicita tu cotización
+      </a>
+    </div>
+
+<!-- ======= Footer SISGER ======= -->
+<footer id="contacto" class="footer-sisger">
+  <div class="container">
+    <div class="row">
+
+      <!-- Marca y texto -->
+      <div class="col s12 m6 l4">
+        <h5 class="footer-sisger__brand">SISGER</h5>
+        <p class="footer-sisger__about">
+          Soluciones en energías renovables para hogares e industrias. Diseñamos, integramos y mantenemos sistemas eficientes y sostenibles.
+        </p>
       </div>
+
+      <!-- Contacto -->
+      <div class="col s12 m6 l4">
+        <h6 class="footer-sisger__title">Contacto</h6>
+        <ul class="footer-sisger__list">
+          <li><i class="material-icons tiny">email</i> sisger@renovables.com</li>
+          <li><i class="material-icons tiny">call</i> +57 3207247916</li>
+          <li><i class="material-icons tiny">place</i> Colombia</li>
+        </ul>
+      </div>
+
+      <!-- Redes -->
+      <div class="col s12 l4">
+        <h6 class="footer-sisger__title">Síguenos</h6>
+        <div class="footer-sisger__social">
+
+         <!-- WhatsApp -->
+          <a class="footer-sisger__social-btn footer-sisger__whatsapp" 
+            href="https://wa.me/573207247916?text=Hola%20SISGER,%20quiero%20más%20información" 
+            target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.8 5.5 2.2 7.9L0 32l8.4-2.2c2.3 1.3 5 2 7.6 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-5 .9.9-4.9-.3-.5C3.3 20 2.6 18 2.6 16c0-7.4 6-13.4 13.4-13.4 3.6 0 7 1.4 9.5 3.9 2.5 2.5 3.9 5.9 3.9 9.5 0 7.4-6 13.4-13.4 13.4zm7.3-10c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2s-.8 1.2-1 1.4c-.2.2-.4.2-.8 0-.4-.2-1.5-.6-2.9-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-.7-1.7-1-2.4c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.2-.4-.3-.8-.5z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a class="footer-sisger__social-btn" 
+             href="https://facebook.com" 
+             target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M22 12a10 10 0 10-11.6 9.9v-7h-2.7V12h2.7V9.4c0-2.6 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.8l-.45 2.9h-2.35v7A10 10 0 0022 12z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a class="footer-sisger__social-btn" 
+             href="https://instagram.com" 
+             target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zM18.4 6.6a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="footer-sisger__social-btn" 
+             href="https://www.linkedin.com" 
+             target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9 8.98h3.8v1.65h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.66 4.8 6.12v6.28h-4v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9v-12z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
     </div>
-  </footer>
+
+    <div class="footer-sisger__bottom center-align">
+      <span>© 2025 Renovables S.A.S. - Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
 
   <!-- Materialize JS y script personalizado -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../Javascript/carrucel.js"></script>
   <script src="../Javascript/script.js"></script>
 </body>
 </html>

@@ -13,10 +13,24 @@
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/home.css">
+
+  <style>
+  .section-cotizacion { padding: 3rem 0; }
+  .cotizacion-card { border-radius: 14px; }
+  .cotizacion-card .card-content { padding: 2rem 1.5rem; }
+  .cotizacion-form .input-field .prefix { color: #9e9e9e; }
+  .cotizacion-form .input-field input:focus + label,
+  .cotizacion-form .input-field textarea:focus + label { color: #2e7d32 !important; } /* toque verde */
+  .cotizacion-form .input-field input:focus,
+  .cotizacion-form .input-field textarea.materialize-textarea:focus { border-bottom: 1px solid #2e7d32 !important; box-shadow: 0 1px 0 0 #2e7d32 !important; }
+  .file-field .btn { border-radius: 8px; }
+</style>
+
 </head>
 <body>
 
-  <!-- Navbar -->
+ <!-- Navbar -->
   <div id="navbar" class="navbar-fixed">
     <nav class="transparent nav-wrapper">
       <div class="container">
@@ -24,9 +38,10 @@
         <a href="#" data-target="mobile-menu" class="sidenav-trigger white-text"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="../html/Index.html" class="white-text">Inicio</a></li>         
-          <li><a href="#servicios" class="white-text">Servicios</a></li>
-          <li><a href="#proyectos" class="white-text">Proyectos</a></li>
-          <li><a href="#contacto" class="white-text">Contacto</a></li>
+          <li><a href="../html/Index.html#servicios" class="white-text">Servicios</a></li>
+          <li><a href="../html/Index.html#proyectos" class="white-text">Proyectos</a></li>
+          <li><a href="../html/Index.html#contacto" class="white-text">Contacto</a></li>
+          <li><a href="../html/Quines_Somos.html" class="white-text">¿Quienes somos?</a></li>
         </ul>
       </div>
     </nav>
@@ -34,10 +49,11 @@
 
   <!-- Sidenav Mobile -->
   <ul class="sidenav" id="mobile-menu">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="../html/Index.html">Inicio</a></li>
+    <li><a href="../html/Index.html#servicios">Servicios</a></li>
+    <li><a href="../html/Index.html#proyectos">Proyectos</a></li>
+    <li><a href="../html/Quines_Somos.html">¿Quienes somos?</a></li>
+    <li><a href="../html/Index.html#contacto">Contacto</a></li>
   </ul>
 
   <!-- Hero Section -->
@@ -52,128 +68,229 @@
     </div>
   </section>
 
-  <form action="procesar_cotizacion.php" method="post" class="cotizacion-form">
- <h5 class="solicitud-cotizacion">Solicitud de Cotización - SISGER</h5>
- <br>
-  <p>Complete este formulario con la información solicitada para brindarle una propuesta ajustada a sus necesidades energéticas.</p>
+  <section class="section section-cotizacion">
+  <div class="container">
+    <!-- Card del formulario -->
+    <div class="card cotizacion-card hoverable">
+      <div class="card-content">
 
-  <!-- Datos de la empresa o cliente -->
-  <div class="input-field">
-    <label for="razon_social">Razón social / Nombre completo</label>
-    <input type="text" id="razon_social" name="razon_social" placeholder="Ej. Energías del Futuro S.A.S." required>
-  </div>
+        <!-- Título con barra verde (reusa estilos de home.css) -->
+        <div class="center-align section-title" style="margin-bottom: 1rem;">
+          <h2 class="title" style="margin-bottom: 0;">Solicitud de Cotización</h2>
+          <div class="title-underline"></div>
+          <p class="subtitle">Completa el formulario para recibir una propuesta ajustada a tus necesidades.</p>
+        </div>
 
-  <div class="input-field">
-    <label for="nit">NIT / Documento de Identidad</label>
-    <input type="text" id="nit" name="nit" placeholder="Ej. 900123456-7" required>
-  </div>
+        <!-- Formulario Materialize -->
+        <form action="procesar_cotizacion.php" method="post" class="cotizacion-form">
+          <div class="row">
+            <!-- Razón social / Nombre -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">business</i>
+              <input id="razon_social" name="razon_social" type="text" required>
+              <label for="razon_social">Razón social / Nombre completo</label>
+            </div>
+            <!-- NIT / Documento -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">badge</i>
+              <input id="nit" name="nit" type="text" required>
+              <label for="nit">NIT / Documento de Identidad</label>
+            </div>
 
-  <div class="input-field">
-    <label for="email">Correo electrónico de contacto</label>
-    <input type="email" id="email" name="email" placeholder="correo@empresa.com" required>
-  </div>
+            <!-- Email -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" name="email" type="email" required>
+              <label for="email">Correo electrónico de contacto</label>
+            </div>
+            <!-- Teléfono -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">phone</i>
+              <input id="telefono" name="telefono" type="tel" required>
+              <label for="telefono">Teléfono</label>
+            </div>
 
-  <div class="input-field">
-    <label for="telefono">Teléfono</label>
-    <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 310 123 4567" required>
-  </div>
+            <!-- Dirección -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">place</i>
+              <input id="direccion" name="direccion" type="text" required>
+              <label for="direccion">Dirección del proyecto</label>
+            </div>
+            <!-- Ciudad -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">location_city</i>
+              <input id="ciudad" name="ciudad" type="text" required>
+              <label for="ciudad">Ciudad / Municipio</label>
+            </div>
 
-  <div class="input-field">
-    <label for="direccion">Dirección del proyecto</label>
-    <input type="text" id="direccion" name="direccion" placeholder="Ej. Calle 45 # 12-34, Manizales" required>
-  </div>
+            <!-- Tipo de servicio -->
+            <div class="input-field col s12 m6">
+              <select id="servicio" name="servicio" required>
+                <option value="" disabled selected></option>
+                <option value="solar">Energía Solar</option>
+                <option value="eolica">Energía Eólica</option>
+                <option value="hidraulica">Energía Hidráulica</option>
+                <option value="geotermica">Energía Geotérmica</option>
+                <option value="maremotriz">Energía Maremotriz</option>
+                <option value="biomasa">Energía de Biomasa</option>
+              </select>
+              <label for="servicio">Tipo de servicio requerido</label>
+            </div>
+            <!-- Uso -->
+            <div class="input-field col s12 m6">
+              <select id="uso" name="uso" required>
+                <option value="" disabled selected></option>
+                <option value="residencial">Residencial</option>
+                <option value="comercial">Comercial</option>
+                <option value="industrial">Industrial</option>
+                <option value="institucional">Institucional</option>
+                <option value="otro">Otro</option>
+              </select>
+              <label for="uso">Uso principal del sistema</label>
+            </div>
 
-  <div class="input-field">
-    <label for="ciudad">Ciudad / Municipio</label>
-    <input type="text" id="ciudad" name="ciudad" required>
-  </div>
+            <!-- Consumo -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">speed</i>
+              <input id="consumo" name="consumo" type="number" min="0" required>
+              <label for="consumo">Consumo promedio mensual (kWh)</label>
+            </div>
+            <!-- Presupuesto -->
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">payments</i>
+              <input id="presupuesto" name="presupuesto" type="number" min="0" required>
+              <label for="presupuesto">Presupuesto disponible (cop)</label>
+            </div>
 
-  <!-- Información del proyecto -->
-  <div class="input-field">
-    <label for="servicio">Tipo de servicio requerido</label>
-    <select id="servicio" name="servicio" required>
-      <option value="" disabled selected>Seleccione</option>
-      <option value="solar">Energía Solar</option>
-      <option value="eolica">Energía Eólica</option>
-      <option value="hidraulica">Energía Hidráulica</option>
-      <option value="geotermica">Energía Geotérmica</option>
-      <option value="maremotriz">Energía Maremotriz</option>
-      <option value="biomasa">Energía de Biomasa</option>
-    </select>
-  </div>
+            <!-- Plazo -->
+            <div class="input-field col s12 m6">
+              <select id="tiempo_ejecucion" name="tiempo_ejecucion" required>
+                <option value="" disabled selected></option>
+                <option value="inmediato">Inmediato</option>
+                <option value="1-3 meses">1 a 3 meses</option>
+                <option value="3-6 meses">3 a 6 meses</option>
+                <option value="6-12 meses">6 a 12 meses</option>
+              </select>
+              <label for="tiempo_ejecucion">Plazo estimado para la ejecución</label>
+            </div>
 
-  <div class="input-field">
-    <label for="uso">Uso principal del sistema</label>
-    <select id="uso" name="uso" required>
-      <option value="" disabled selected>Seleccione</option>
-      <option value="residencial">Residencial</option>
-      <option value="comercial">Comercial</option>
-      <option value="industrial">Industrial</option>
-      <option value="institucional">Institucional</option>
-      <option value="otro">Otro</option>
-    </select>
-  </div>
+            <!-- Archivo -->
+            <div class="file-field input-field col s12 m6">
+              <div class="btn grey lighten-3 black-text">
+                <span>Adjuntar</span>
+                <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx,.jpg,.png">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Planos o estudios (opcional)">
+              </div>
+            </div>
 
-  <div class="input-field">
-    <label for="consumo">Consumo promedio mensual de energía (kWh)</label>
-    <input type="number" id="consumo" name="consumo" placeholder="Ej. 1200" required>
-  </div>
+            <!-- Descripción -->
+            <div class="input-field col s12">
+              <i class="material-icons prefix">description</i>
+              <textarea id="descripcion" name="descripcion" class="materialize-textarea" data-length="600" required></textarea>
+              <label for="descripcion">Descripción detallada del proyecto</label>
+            </div>
 
-  <div class="input-field">
-    <label for="presupuesto">Presupuesto estimado disponible (COP)</label>
-    <input type="number" id="presupuesto" name="presupuesto" placeholder="Ej. 50000000" required>
-  </div>
+            <!-- Enviar -->
+            <div class="col s12 center-align" style="margin-top: 4px;">
+              <button type="submit" class="btn-large yellow darken-2 black-text waves-effect waves-dark">
+                Enviar solicitud de cotización
+              </button>
+            </div>
+            </div>
+         </form>
 
-  <div class="input-field">
-    <label for="tiempo_ejecucion">Plazo estimado para la ejecución</label>
-    <select id="tiempo_ejecucion" name="tiempo_ejecucion" required>
-      <option value="" disabled selected>Seleccione</option>
-      <option value="inmediato">Inmediato</option>
-      <option value="1-3 meses">1 a 3 meses</option>
-      <option value="3-6 meses">3 a 6 meses</option>
-      <option value="6-12 meses">6 a 12 meses</option>
-    </select>
-  </div>
-
-  <div class="input-field">
-    <label for="descripcion">Descripción detallada del proyecto</label>
-    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Incluya ubicación específica, requerimientos técnicos, expectativas de generación y cualquier información adicional relevante" required></textarea>
-  </div>
-
-  <!-- Adjuntar documentos -->
-  <div class="input-field">
-    <label for="archivo">Adjuntar planos, estudios o documentos técnicos (opcional)</label><br>
-    <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx,.jpg,.png">
-  </div>
-
-  <!-- Botón de envío -->
-  <div class="input-field">
-    <button type="submit" class="btn-large waves-effect waves-light green">
-      Enviar solicitud de cotización
-    </button>
-  </div>
-</form>
-
-
-    <!-- Pie de página -->
-  <footer id="contacto" class="page-footer grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h5 class="white-text">Contáctanos</h5>
-          <p class="grey-text text-lighten-4">info@renovables.com | +57 300 0000000</p>
         </div>
       </div>
     </div>
-    <div class="footer-copyright grey darken-4">
-      <div class="container center-align">
-        © 2025 Renovables S.A.S.
+  </section>
+
+  <!-- ======= Footer SISGER ======= -->
+<footer id="contacto" class="footer-sisger">
+  <div class="container">
+    <div class="row">
+
+      <!-- Marca y texto -->
+      <div class="col s12 m6 l4">
+        <h5 class="footer-sisger__brand">SISGER</h5>
+        <p class="footer-sisger__about">
+          Soluciones en energías renovables para hogares e industrias. Diseñamos, integramos y mantenemos sistemas eficientes y sostenibles.
+        </p>
       </div>
+
+      <!-- Contacto -->
+      <div class="col s12 m6 l4">
+        <h6 class="footer-sisger__title">Contacto</h6>
+        <ul class="footer-sisger__list">
+          <li><i class="material-icons tiny">email</i> sisger@renovables.com</li>
+          <li><i class="material-icons tiny">call</i> +57 3207247916</li>
+          <li><i class="material-icons tiny">place</i> Colombia</li>
+        </ul>
+      </div>
+
+      <!-- Redes -->
+      <div class="col s12 l4">
+        <h6 class="footer-sisger__title">Síguenos</h6>
+        <div class="footer-sisger__social">
+
+         <!-- WhatsApp -->
+          <a class="footer-sisger__social-btn footer-sisger__whatsapp" 
+            href="https://wa.me/573207247916?text=Hola%20SISGER,%20quiero%20más%20información" 
+            target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
+              <path fill="currentColor" d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.8 5.5 2.2 7.9L0 32l8.4-2.2c2.3 1.3 5 2 7.6 2 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-5 .9.9-4.9-.3-.5C3.3 20 2.6 18 2.6 16c0-7.4 6-13.4 13.4-13.4 3.6 0 7 1.4 9.5 3.9 2.5 2.5 3.9 5.9 3.9 9.5 0 7.4-6 13.4-13.4 13.4zm7.3-10c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2s-.8 1.2-1 1.4c-.2.2-.4.2-.8 0-.4-.2-1.5-.6-2.9-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-.7-1.7-1-2.4c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.2-.4-.3-.8-.5z"/>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a class="footer-sisger__social-btn" 
+             href="https://facebook.com" 
+             target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M22 12a10 10 0 10-11.6 9.9v-7h-2.7V12h2.7V9.4c0-2.6 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.8l-.45 2.9h-2.35v7A10 10 0 0022 12z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a class="footer-sisger__social-btn" 
+             href="https://instagram.com" 
+             target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zM18.4 6.6a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="footer-sisger__social-btn" 
+             href="https://www.linkedin.com" 
+             target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9 8.98h3.8v1.65h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.66 4.8 6.12v6.28h-4v-5.57c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9v-12z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
     </div>
-  </footer>
+
+    <div class="footer-sisger__bottom center-align">
+      <span>© 2025 Renovables S.A.S. - Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+  
 
   <!-- Materialize JS y script personalizado -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="../Javascript/script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    M.FormSelect.init(document.querySelectorAll('select'));
+    M.CharacterCounter.init(document.querySelectorAll('#descripcion'));
+    M.updateTextFields();
+  });
+</script>
 </body>
 </html>
